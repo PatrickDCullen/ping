@@ -22,10 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 // Auth
 
-// Making a change here to test git
-
-// Coming back to this and want to make sure git works how I think it does
-
 Route::get('login', [AuthenticatedSessionController::class, 'create'])
     ->name('login')
     ->middleware('guest');
@@ -121,7 +117,9 @@ Route::get('contacts/{contact}/edit', [ContactsController::class, 'edit'])
     ->name('contacts.edit')
     ->middleware('auth');
 
-Route::put('contacts/{contact}', [ContactsController::class, 'update'])
+Route::put('contacts/{contacreports
+    reports
+    Reportst}', [ContactsController::class, 'update'])
     ->name('contacts.update')
     ->middleware('auth');
 
@@ -138,6 +136,10 @@ Route::put('contacts/{contact}/restore', [ContactsController::class, 'restore'])
 Route::get('reports', [ReportsController::class, 'index'])
     ->name('reports')
     ->middleware('auth');
+
+Route::get('testing', function () {
+    return inertia('Testing/Index');
+})->name('testing')->middleware('auth');
 
 // Images
 
