@@ -49,6 +49,7 @@ class HandleInertiaRequests extends Middleware
                             'id' => $request->user()->account->id,
                             'name' => $request->user()->account->name,
                         ],
+                        'plan' => 'monthly'
                     ] : null,
                 ];
             },
