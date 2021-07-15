@@ -41,6 +41,8 @@ Route::get('/', [DashboardController::class, 'index'])
 
 // Users
 
+Route::get('foo/{id}', fn() => 'hello there')->name('foo');
+
 Route::get('users', [UsersController::class, 'index'])
     ->name('users')
     ->middleware('auth');
