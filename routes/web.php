@@ -119,9 +119,7 @@ Route::get('contacts/{contact}/edit', [ContactsController::class, 'edit'])
     ->name('contacts.edit')
     ->middleware('auth');
 
-Route::put('contacts/{contacreports
-    reports
-    Reportst}', [ContactsController::class, 'update'])
+Route::put('contacts/{contact}', [ContactsController::class, 'update'])
     ->name('contacts.update')
     ->middleware('auth');
 
