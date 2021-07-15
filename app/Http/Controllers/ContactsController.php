@@ -69,6 +69,9 @@ class ContactsController extends Controller
     public function edit(Contact $contact)
     {
         return Inertia::render('Contacts/Edit', [
+            'can' => [
+                'delete_user' => auth()->user()->can('delete_user')
+            ],
             'contact' => [
                 'id' => $contact->id,
                 'first_name' => $contact->first_name,

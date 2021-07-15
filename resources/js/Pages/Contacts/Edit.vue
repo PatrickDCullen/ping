@@ -61,6 +61,7 @@ export default {
   props: {
     contact: Object,
     organizations: Array,
+    can: Object,
   },
   remember: 'form',
   data() {
